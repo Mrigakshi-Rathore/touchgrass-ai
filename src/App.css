@@ -1,0 +1,383 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #243d2d;
+  background: #faf9f3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button, a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  width: 100%;
+  overflow: hidden;
+}
+
+.navbar {
+  max-width: 1120px;
+  margin: auto;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: #244b32;
+  font-size: 23px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  color: #a1a85e;
+}
+
+.nav-note {
+  color: #738073;
+  font-size: 13px;
+}
+
+.hero {
+  max-width: 1120px;
+  margin: 16px auto 55px;
+  padding: 85px 50px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #e8eedf;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #77844e;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 7vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin: 25px 0 18px;
+}
+
+.hero h1 span {
+  color: #76884e;
+  font-style: italic;
+}
+
+.hero > p {
+  max-width: 480px;
+  color: #61705f;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 15px 23px;
+  border-radius: 10px;
+  background: #294b34;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero-decoration {
+  position: absolute;
+  right: 9%;
+  top: 25%;
+  font-size: clamp(100px, 18vw, 210px);
+  opacity: 0.8;
+  transform: rotate(-12deg);
+}
+
+.planner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 30px 24px 70px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.section-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  margin: 12px 0;
+}
+
+.section-heading p {
+  color: #788276;
+  font-size: 14px;
+}
+
+.field {
+  margin-bottom: 32px;
+}
+
+.field > label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.activity-card {
+  min-height: 115px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid #e5e7dc;
+  border-radius: 14px;
+  background: #fff;
+  color: #4a5949;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.activity-card:hover,
+.choice:hover {
+  border-color: #8a9b69;
+}
+
+.activity-card.selected,
+.choice.selected {
+  background: #eaf0e2;
+  border-color: #70834f;
+  color: #2b4c32;
+}
+
+.activity-icon {
+  font-size: 27px;
+}
+
+.choice-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.choice {
+  flex: 1;
+  padding: 13px 16px;
+  border: 1px solid #e5e7dc;
+  border-radius: 10px;
+  background: white;
+  color: #4a5949;
+  font-size: 13px;
+}
+
+.generate-button,
+.complete-button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 11px;
+  background: #294b34;
+  color: white;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.generate-button:hover,
+.complete-button:hover,
+.hero-button:hover {
+  background: #3b6246;
+}
+
+.mission {
+  margin-top: 28px;
+  padding: 26px;
+  border: 1px solid #dce4d2;
+  border-radius: 18px;
+  background: #f0f3e9;
+  animation: appear 0.3s ease;
+}
+
+.mission-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.mission-time {
+  font-size: 12px;
+  color: #657553;
+}
+
+.mission h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.mission > p {
+  color: #566451;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.mission .mission-tip {
+  margin: 20px 0;
+  padding: 13px;
+  border-radius: 9px;
+  background: #e3ead8;
+  font-size: 12px;
+}
+
+.complete-button {
+  background: #78864e;
+}
+
+.progress {
+  margin-top: 25px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e5e7dc;
+  border-radius: 12px;
+  background: white;
+  font-size: 13px;
+}
+
+.progress strong {
+  font-size: 18px;
+  color: #78864e;
+}
+
+footer {
+  padding: 28px 20px;
+  text-align: center;
+  border-top: 1px solid #e8e9df;
+  color: #697566;
+  font-size: 12px;
+}
+
+footer span {
+  font-size: 11px;
+  color: #92998d;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .nav-note {
+    font-size: 11px;
+  }
+
+  .hero {
+    margin: 8px 12px 35px;
+    padding: 60px 25px;
+  }
+
+  .hero-decoration {
+    right: -15px;
+    top: 15px;
+    opacity: 0.2;
+  }
+
+  .hero > p {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 49px;
+  }
+
+  .activity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .planner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+
+.mission-description {
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.mission-description h1,
+.mission-description h2,
+.mission-description h3 {
+  margin: 16px 0 8px;
+  color: #244b35;
+}
+
+.mission-description ol,
+.mission-description ul {
+  padding-left: 24px;
+  margin: 10px 0;
+}
+
+.mission-description li {
+  padding-left: 4px;
+  margin-bottom: 8px;
+}
+
+.mission-description p {
+  margin: 10px 0;
+}
