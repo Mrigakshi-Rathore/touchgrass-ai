@@ -33,7 +33,7 @@ Install Node.js and [Ollama](https://ollama.com/).
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Mrigakshi-Rathore/touch-grass-ai.git
 cd touchgrass-ai
 ```
 
